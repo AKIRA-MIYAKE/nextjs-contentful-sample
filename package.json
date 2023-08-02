@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier 'src/**/*.{ts,tsx,css}'"
   },
   "dependencies": {
     "@types/node": "20.4.5",
@@ -23,7 +24,10 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
     "contentful-import": "^8.5.63",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "eslint-config-prettier": "^8.9.0",
+    "prettier": "^3.0.0"
   }
 }
