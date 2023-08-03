@@ -17,7 +17,7 @@ export const PostSummaryListItem: FC<PostSummaryListItemProps> = ({ post }) => {
             <img
               className="w-full aspect-video object-cover group-hover:shadow-md transition"
               src={`${post.coverImage.url}?w=600&q=75`}
-              alt={''}
+              alt=""
             />
           </div>
           <div className="group-hover:underline text-3xl font-bold">
@@ -34,6 +34,7 @@ export const PostSummaryListItem: FC<PostSummaryListItemProps> = ({ post }) => {
             <img
               className="w-12 h-12 object-cover rounded-full"
               src={`${post.author.picture.url}?w=48&q=75`}
+              alt=""
             />
           </div>
           <div>{post.author.name}</div>
