@@ -1,12 +1,13 @@
 import type { Post } from '@/interfaces';
 import { fetchGraphQL } from '@/libs/contentful/fetch-graph-ql';
+import { isPreviewMode } from '@/libs/contentful/is-preview-mode'
 import { POST_FIELDS, extractPosts } from '@/libs/contentful/post';
 import { PostSummaryList } from '@/components/posts/post-summary-list/PostSummaryList';
 
 const listLatestPostWithoutSpecificPostBySlug: (params: {
   slug: string;
 }) => Promise<Post[]> = async ({ slug }) => {
-  const isPreview = process.env.NODE_ENV !== 'production';
+  const isPreview = isPreviewMode()
   const result = await fetchGraphQL(
     `
       query {
