@@ -2,10 +2,20 @@
   @apply text-lg;
 }
 
-.content p,
-.content ul,
-.content ol,
+.content p {
+  @apply my-6;
+  @apply whitespace-pre-wrap;
+}
+
 .content blockquote {
+  @apply text-base;
+  @apply my-6;
+  @apply border-l-4 border-gray-400 pl-4;
+  @apply italic;
+}
+
+.content ul,
+.content ol {
   @apply my-6;
 }
 
