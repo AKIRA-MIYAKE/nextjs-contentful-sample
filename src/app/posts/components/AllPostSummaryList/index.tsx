@@ -1,6 +1,6 @@
 import type { Post } from '@/interfaces';
 import { fetchGraphQL } from '@/libs/contentful/fetch-graph-ql';
-import { isPreviewMode } from '@/libs/contentful/is-preview-mode'
+import { isPreviewMode } from '@/libs/contentful/is-preview-mode';
 import { POST_FIELDS, extractPosts } from '@/libs/contentful/post';
 import { PostSummaryList } from '@/components/posts/post-summary-list/PostSummaryList';
 
@@ -20,6 +20,9 @@ const listAllPost: () => Promise<Post[]> = async () => {
     `,
     {
       isPreview,
+      next: {
+        tags: ['posts'],
+      },
     },
   );
 
