@@ -10,10 +10,12 @@
     "prettier": "prettier 'src/**/*.{ts,tsx,css}'"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.17.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "dayjs": "^1.11.9",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
@@ -28,6 +30,7 @@
     "contentful-import": "^8.5.63",
     "dotenv": "^16.3.1",
     "eslint-config-prettier": "^8.9.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1"
   }
 }

@@ -1,0 +1,18 @@
+.content {
+  @apply text-lg;
+}
+
+.content p,
+.content ul,
+.content ol,
+.content blockquote {
+  @apply my-6;
+}
+
+.content h2 {
+  @apply text-3xl mt-12 mb-4;
+}
+
+.content h3 {
+  @apply text-2xl mt-8 mb-4;
+}
