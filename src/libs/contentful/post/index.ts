@@ -28,6 +28,14 @@ author {
     url
   }
 }
+cta {
+  id
+  variant
+  actionText
+  actionUrl
+  title
+  description
+}
 `;
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

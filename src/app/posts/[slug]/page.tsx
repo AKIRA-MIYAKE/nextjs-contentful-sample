@@ -8,6 +8,7 @@ import { fetchGraphQL } from '@/libs/contentful/fetch-graph-ql';
 import { isPreviewMode } from '@/libs/contentful/is-preview-mode';
 import { POST_FIELDS, extractPosts } from '@/libs/contentful/post';
 import { PostContent } from '@/components/posts/PostContent';
+import { PostCTA } from '@/components/posts/PostCTA';
 
 import { LatestPostWithoutSpecificPostSummaryList } from './components/LatestPostWithoutSpecificPostSummaryList';
 
@@ -149,6 +150,12 @@ const Page: (props: PageProps) => Promise<JSX.Element> = async ({
           </div>
         </div>
       </section>
+
+      {post.cta && (
+        <div className="mb-24 flex justify-center">
+          <PostCTA cta={post.cta} />
+        </div>
+      )}
 
       <div className="max-w-[1024px] mx-auto px-6">
         <div className="mb-6">

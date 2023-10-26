@@ -28,4 +28,14 @@ export interface Post {
       url: string;
     };
   };
+  cta?: PostCTA;
+}
+
+export interface PostCTA {
+  id: string;
+  variant: 'card';
+  actionText: string;
+  actionUrl: string;
+  title?: string;
+  description?: string;
 }

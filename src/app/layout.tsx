@@ -1,7 +1,9 @@
+import './globals.css';
 import type { ReactNode } from 'react';
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 
-import './globals.css';
+import { OptimizeNext } from '@/components/OptimizeNext';
 
 export const metadata: Metadata = {
   title: 'Next.js Contentful Sample',
@@ -13,7 +15,12 @@ const RootLayout: (props: {
 }) => Promise<JSX.Element> = async ({ children }) => {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <Suspense>
+          <OptimizeNext />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 };
