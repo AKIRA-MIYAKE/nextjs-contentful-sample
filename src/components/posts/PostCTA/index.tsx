@@ -20,12 +20,20 @@ export const PostCTA: FC<PostCTAProps> = ({ cta }) => {
         return (
           <div className="mb-4">
             {cta.title && (
-              <p className="mb-2 text-2xl font-bold text-gray-900">
+              <p
+                className="mb-2 text-2xl font-bold text-gray-900"
+                data-post-cta={`${cta.id}-title`}
+              >
                 {cta.title}
               </p>
             )}
             {cta.description && (
-              <p className="text-gray-700">{cta.description}</p>
+              <p
+                className="text-gray-700"
+                data-post-cta={`${cta.id}-description`}
+              >
+                {cta.description}
+              </p>
             )}
           </div>
         );
@@ -36,6 +44,7 @@ export const PostCTA: FC<PostCTAProps> = ({ cta }) => {
           href={cta.actionUrl}
           target="_blank"
           className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+          data-post-cta={`${cta.id}-action`}
         >
           {cta.actionText}
         </a>
